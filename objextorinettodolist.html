@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class todolist{
+        todoitems=[]
+        inp=null
+        nul=null
+        nli=null
+        constructor(){
+           this.inp=document.createElement("input")
+            document.body.appendChild(this.inp)
+            var btn=document.createElement("button")
+            btn.innerText="Add todo"
+            btn.onclick=this.addtodo
+             document.body.appendChild(btn)
+            this.nul=document.createElement("ul")
+            document.body.appendChild(this.nul)
+            }
+
+        addtodo=()=>{
+            
+            this.todoitems.push(this.inp.value)
+            console.log(this)
+            this.nul.innerText=""
+            this.todoitems.forEach((todoitem)=>{
+                this.nli=document.createElement("li")
+                this.nli.innerText=todoitem
+                this.nul.appendChild(this.nli)
+            })
+            }
+        
+    }
+    var todo=new todolist
+    
+    var todo1=new todolist
+    var todo2=new todolist
+</script>
+    
+</body>
+</html>
