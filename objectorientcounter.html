@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class counter{
+
+            a=0
+            nh1=null
+            constructor(){
+            
+                this.nh1=document.createElement('h1')
+               this.nh1.innerText="Counter::"+this.a
+                var btni=document.createElement("button")
+                btni.innerText="inc"
+                btni.onclick=this.inc
+                var btnd=document.createElement("button")
+                btnd.innerText="dec"
+                btnd.onclick=this.dec
+                document.body.appendChild(this.nh1)
+                document.body.appendChild(btni)
+                document.body.appendChild(btnd)
+
+               
+            }
+           inc=()=>{
+               this.a++
+               this.nh1.innerText="Counter::"+this.a
+               
+               
+            }
+            dec=()=>{
+                this.a--
+                this.nh1.innerText="Counter::"+this.a
+            
+        
+
+           }
+        }
+        var counter1=new counter
+        var counter2=new counter
+        console.log(counter1)
+    </script>
+</body>
+</html>
